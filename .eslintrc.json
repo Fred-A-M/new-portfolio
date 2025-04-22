@@ -1,0 +1,10 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": ["node_modules/", ".next/", "public/", "dist/", "build/", "**/*.generated.*"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-console": "warn"
+  }
+}

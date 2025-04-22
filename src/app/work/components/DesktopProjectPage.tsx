@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Project } from "@/app/consts";
+import { Project } from '@/app/consts';
 import ProjectFooter from '../components/ProjectFooter';
 import ProjectHeaderDesktop from '../components/ProjectHeaderDesktop';
 
@@ -10,7 +10,6 @@ interface ProjectPageProps {
 }
 
 export default function DesktopProjectPage({ project, sections }: ProjectPageProps) {
-
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -19,11 +18,7 @@ export default function DesktopProjectPage({ project, sections }: ProjectPagePro
     <div className="flex flex-col gap-20 w-full h-full mb-10">
       <ProjectHeaderDesktop project={project} />
 
-      {sections && sections.map((section, index) => (
-        <div key={index}>
-          {section}
-        </div>
-      ))}
+      {sections && sections.map((section, index) => <div key={index}>{section}</div>)}
 
       <ProjectFooter project={project} />
     </div>

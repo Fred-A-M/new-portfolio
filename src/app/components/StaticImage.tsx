@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Image from 'next/image';
 
 interface StaticImageProps {
@@ -24,10 +24,10 @@ export default function StaticImage({
   width = 0,
   height = 0,
   zIndex = 20,
-  className = "",
+  className = '',
 }: StaticImageProps) {
   return (
-    <div 
+    <div
       style={{
         zIndex: zIndex,
         transform: `rotate(${rotation}deg)`,
@@ -35,18 +35,18 @@ export default function StaticImage({
       }}
       className="hover:scale-120 hover:z-30"
     >
-      <Image 
-        src={src} 
-        alt={alt} 
+      <Image
+        src={src}
+        alt={alt}
         width={width ? width : 800}
         height={height ? height : 800}
         style={{
-          maxWidth: width ? `${width}px` : (isMobile ? "250px" : "450px"),
-          maxHeight: height ? `${height}px` : (isMobile ? "300px" : "600px"),
-          width: "auto",
-          height: "auto",
-          objectFit: "contain",
-          filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))'
+          maxWidth: width ? `${width}px` : isMobile ? '250px' : '450px',
+          maxHeight: height ? `${height}px` : isMobile ? '300px' : '600px',
+          width: 'auto',
+          height: 'auto',
+          objectFit: 'contain',
+          filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))',
         }}
         className={`rounded-sm ${className}`}
         priority={true}

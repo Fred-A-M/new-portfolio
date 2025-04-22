@@ -14,15 +14,19 @@ export default function ProjectHeader({ project, isMobile }: ProjectHeaderProps)
           <p className="radio-canada-big-bold">{project.name}</p>
           <p>{project.client}</p>
         </div>
-        {!isMobile && <div className="flex flex-col gap-2">
-          {project.description.map((description, index) => (
-            <p key={index} className="text-lg">{description}</p>
-          ))}
-        </div>}
+        {!isMobile && (
+          <div className="flex flex-col gap-2">
+            {project.description.map((description, index) => (
+              <p key={index} className="text-lg">
+                {description}
+              </p>
+            ))}
+          </div>
+        )}
       </div>
       <div className={`flex ${isMobile ? 'justify-end' : 'justify-center'} items-center h-full`}>
-        <StaticImage 
-          src={project.gallery[0].image} 
+        <StaticImage
+          src={project.gallery[0].image}
           alt={project.name}
           width={project.gallery[0].width || undefined}
           height={project.gallery[0].height || undefined}
