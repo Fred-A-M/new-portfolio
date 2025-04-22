@@ -51,7 +51,12 @@ export interface Project {
   client: string;
   description: string[];
   image: string;
-  gallery: {
+  galleryDesktop: {
+    image: string;
+    width?: number;
+    height?: number;
+  }[];
+  galleryMobile: {
     image: string;
     width?: number;
     height?: number;

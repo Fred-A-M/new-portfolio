@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { projects } from '../consts';
 import SlidingImage from './SlidingImage';
-import { motion, AnimatePresence } from 'framer-motion';
+import DescriptionCard from './DescriptionCard';
 
 export default function DesktopProjects() {
   const [activeProject, setActiveProject] = useState(projects[0]);
@@ -38,36 +38,7 @@ export default function DesktopProjects() {
         </div>
 
         {/* Right column with fixed card */}
-        <div style={{ perspective: '1000px' }}>
-          <motion.div
-            className="sticky top-1/2 -translate-y-1/4 flex justify-center items-center"
-            style={{
-              transformStyle: 'preserve-3d',
-            }}
-            animate={{
-              rotateY: isFlipped ? 180 : 0,
-              rotateZ: isFlipped ? 180 : 0,
-              rotateX: isFlipped ? 180 : 0,
-            }}
-            transition={{
-              duration: 0.4,
-              ease: 'easeInOut',
-            }}
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeProject.name}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="bg-amber-100/10 backdrop-blur-sm p-8 h-52 rounded-sm shadow-lg font-['Helvetica'] border-black/10 w-[70%]"
-              >
-                <h2 className="text-2xl font-bold mb-4">{activeProject.name}</h2>
-                <p className="text-lg mb-4">{activeProject.client}</p>
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
-        </div>
+        <DescriptionCard isFlipped={isFlipped} activeProject={activeProject} />
       </div>
     </div>
   );

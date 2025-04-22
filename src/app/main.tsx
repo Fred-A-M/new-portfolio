@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import DesktopProjects from './components/DesktopProjects';
+import Header from './components/Header';
 export default function Main() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -32,7 +33,8 @@ export default function Main() {
       {isMobile ? (
         <div className="w-full h-full"></div>
       ) : (
-        <div className="flex w-full items-center justify-center">
+        <div className="flex flex-col w-full items-center justify-center">
+          <Header />
           <DesktopProjects />
         </div>
       )}
