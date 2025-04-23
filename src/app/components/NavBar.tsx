@@ -2,47 +2,13 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 export default function NavBar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const { scrollY } = useScroll();
-  const lastScrollY = useRef(0);
-
-  // Track scroll direction and toggle navbar visibility
-  useMotionValueEvent(scrollY, 'change', latest => {
-    if (latest < 300) {
-      setIsVisible(true);
-      lastScrollY.current = latest;
-      return;
-    }
-
-    // Only trigger if scroll amount is significant (> 5px)
-    if (latest > lastScrollY.current) {
-      setIsVisible(false);
-    } else if (latest < lastScrollY.current - 5) {
-      setIsVisible(true);
-    }
-
-    lastScrollY.current = latest;
-  });
-
-  // Prevent scrolling when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
 
   return (
     <>
