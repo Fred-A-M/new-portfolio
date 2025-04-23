@@ -36,6 +36,7 @@ export default function Main() {
         <div className="flex flex-col w-full items-center justify-center">
           <Header />
           <DesktopProjects />
+          <Header />
         </div>
       )}
     </div>

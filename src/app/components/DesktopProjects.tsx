@@ -14,7 +14,7 @@ export default function DesktopProjects() {
   }, [activeProject]);
 
   return (
-    <div className="flex flex-col gap-10 pt-28 w-full">
+    <div className="flex flex-col gap-10 w-full">
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-1">
           <div className="text-lg">Work</div>
@@ -23,7 +23,7 @@ export default function DesktopProjects() {
       </div>
       <div className="grid grid-cols-2 gap-20 w-[90%] mx-auto">
         {/* Left column with scrolling images */}
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-20">
           {projects.map(project => (
             <div className="flex w-full" key={project.name}>
               <SlidingImage
