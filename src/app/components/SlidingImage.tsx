@@ -15,6 +15,7 @@ interface ImageProps {
   height?: number;
   zIndex?: number;
   onInView?: () => void;
+  isSmallerScreen?: boolean;
 }
 
 export default function SlidingImage({
@@ -25,11 +26,13 @@ export default function SlidingImage({
   height,
   zIndex = 20,
   onInView,
+  isSmallerScreen,
 }: ImageProps) {
   const ref = useRef(null);
+
   const isInView = useInView(ref, {
     amount: 0.6,
-    margin: '-25% 0px -25% 0px',
+    margin: isSmallerScreen ? '-35% 0px -35% 0px' : '-25% 0px -25% 0px',
     once: false,
   });
 

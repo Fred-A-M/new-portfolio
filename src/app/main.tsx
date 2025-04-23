@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import DesktopProjects from './components/DesktopProjects';
 import Header from './components/Header';
+import MobileProjects from './components/MobileProjects';
 export default function Main() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -31,7 +32,11 @@ export default function Main() {
   return (
     <div className={`flex justify-center ${!isMobile && 'min-h-[calc(100vh-150px)]'}`}>
       {isMobile ? (
-        <div className="w-full h-full"></div>
+        <div className="flex flex-col w-full items-center justify-center">
+          <Header />
+          <MobileProjects />
+          <Header />
+        </div>
       ) : (
         <div className="flex flex-col w-full items-center justify-center">
           <Header />

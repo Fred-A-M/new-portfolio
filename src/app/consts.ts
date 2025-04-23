@@ -4,9 +4,9 @@ export const projects = [
     client: 'Personal',
     roles: ['Developer', 'Designer'],
     tools: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
-    tagline: 'A fun portfolio site for a senior advertising creative',
+    tagline: 'A fun portfolio site for a \nsenior advertising creative',
     description:
-      'I created this portfolio site Alice Dowdall, a senior advertising creative. She wanted a homepage where emoji-style eyes followed the cursor as the user selected her projects.',
+      'I created this portfolio site for Alice Dowdall, a senior advertising creative. She wanted a homepage where emoji-style eyes followed the cursor as the user browsed her projects.',
     image: '/projects/AliceDowdall/desktop1.gif',
     galleryDesktop: [
       { image: '/projects/AliceDowdall/desktop1.gif' },
@@ -23,7 +23,7 @@ export const projects = [
     client: 'Personal',
     roles: ['Developer', 'Designer'],
     tools: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Apollo Client'],
-    tagline: 'A tool to explore the first 3 generations of Pokémon',
+    tagline: 'A tool to explore the first 3 \n generations of Pokémon',
     description:
       'An interactive site I made to explore the first 3 generations of Pokémon. I used the public GraphQL PokéAPI to fetch the data. The user can browse through the first 3 generations of Pokémon, view their stats, and add them to a favourites list to compare later.',
     image: '/projects/Pokemon/desktop1.gif',
@@ -42,7 +42,7 @@ export const projects = [
     client: 'Personal',
     roles: ['Developer', 'Designer'],
     tools: ['React', 'JavaScript', 'CSS', 'HTML', 'Tailwind CSS', 'Dall-E'],
-    tagline: "A turn-based 'trumps' game with mutant characters",
+    tagline: "A turn-based 'trumps' game with \n mutant characters",
     description:
       "I created a 'Top Trumps' style game where the user plays against the computer to win the deck. I created the gameplay mechanics from scratch and designed the cards, with the mutant images generated using Dall-E.",
     image: '/projects/MutantTrumps/desktop1.gif',

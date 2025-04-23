@@ -15,9 +15,12 @@ export default function DescriptionCard({ isFlipped, activeProject }: Descriptio
   });
 
   return (
-    <div style={{ perspective: '1000px' }} className="flex justify-center pt-15">
+    <div
+      style={{ perspective: '1000px' }}
+      className="flex justify-end lg:justify-center pt-10 lg:pt-15"
+    >
       <motion.div
-        className="sticky top-1/2 -translate-y-1/4 flex flex-col justify-center items-center shadow-xl bg-amber-100/20 h-48 rounded-xs text-black border border-black w-[70%] text-center"
+        className="sticky top-1/2 -translate-y-1/4 flex flex-col justify-center items-center shadow-xl bg-amber-100/20 h-32 lg:h-48 rounded-xs text-black border border-black w-[70%] text-center"
         style={{
           transformStyle: 'preserve-3d',
         }}
@@ -38,7 +41,9 @@ export default function DescriptionCard({ isFlipped, activeProject }: Descriptio
             animate={{ opacity: 1, rotateY: isFlipped ? 180 : 0 }}
             exit={{ opacity: 0 }}
           >
-            <p className="text-sm px-12">{activeProject.tagline}</p>
+            <p className="text-xs md:text-sm px-12 xl:whitespace-pre-line">
+              {activeProject.tagline}
+            </p>
           </motion.div>
         </AnimatePresence>
       </motion.div>

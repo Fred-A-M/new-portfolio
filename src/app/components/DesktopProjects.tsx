@@ -8,6 +8,22 @@ import Link from 'next/link';
 export default function DesktopProjects() {
   const [activeProject, setActiveProject] = useState(projects[0]);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [isSmallerScreen, setIsSmallerScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallerScreen(window.innerWidth < 900);
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Trigger flip animation when activeProject changes
   useEffect(() => {
@@ -16,13 +32,12 @@ export default function DesktopProjects() {
 
   return (
     <div className="flex flex-col gap-10 w-full">
-      <div className="flex flex-col gap-10">
-        <div className="flex flex-col gap-1">
-          <div className="text-lg">Work</div>
-          <span className="w-full h-[1px] bg-black"></span>
-        </div>
+      <div className="flex flex-col gap-1">
+        <div className="text-lg">Work</div>
+        <span className="w-full h-[1px] bg-black"></span>
       </div>
-      <div className="grid grid-cols-2 gap-20 w-[90%] mx-auto">
+
+      <div className="grid grid-cols-2 gap-20 w-full lg:w-[90%] mx-auto">
         {/* Left column with scrolling images */}
         <div className="flex flex-col gap-20">
           {projects.map(project => (
@@ -33,6 +48,7 @@ export default function DesktopProjects() {
                 width={600}
                 height={600}
                 onInView={() => setActiveProject(project)}
+                isSmallerScreen={isSmallerScreen}
               />
             </Link>
           ))}
