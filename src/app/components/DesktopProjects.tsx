@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { projects } from '../consts';
 import SlidingImage from './SlidingImage';
 import DescriptionCard from './DescriptionCard';
+import Link from 'next/link';
 
 export default function DesktopProjects() {
   const [activeProject, setActiveProject] = useState(projects[0]);
@@ -25,7 +26,7 @@ export default function DesktopProjects() {
         {/* Left column with scrolling images */}
         <div className="flex flex-col gap-20">
           {projects.map(project => (
-            <div className="flex w-full" key={project.name}>
+            <Link href={project.link} className="flex w-full" key={project.name}>
               <SlidingImage
                 src={project.image}
                 alt={project.name}
@@ -33,7 +34,7 @@ export default function DesktopProjects() {
                 height={600}
                 onInView={() => setActiveProject(project)}
               />
-            </div>
+            </Link>
           ))}
         </div>
 

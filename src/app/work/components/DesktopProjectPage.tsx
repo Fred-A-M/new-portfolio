@@ -15,10 +15,12 @@ export default function DesktopProjectPage({ project, sections }: ProjectPagePro
   }
 
   return (
-    <div className="flex flex-col gap-20 w-full h-full mb-10">
+    <div className="flex flex-col gap-20 w-full h-full">
       <ProjectHeaderDesktop project={project} />
 
-      {sections && sections.map((section, index) => <div key={index}>{section}</div>)}
+      <div className="flex flex-col gap-20 max-w-[900px] mx-auto">
+        {sections && sections.map((section, index) => <div key={index}>{section}</div>)}
+      </div>
 
       <ProjectFooter project={project} />
     </div>

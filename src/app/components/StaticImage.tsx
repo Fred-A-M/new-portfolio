@@ -48,7 +48,7 @@ export default function StaticImage({
           objectFit: 'contain',
           filter: 'drop-shadow(0 8px 8px rgba(0, 0, 0, 0.3))',
         }}
-        className={`rounded-sm ${className}`}
+        className={`rounded-xl ${className}`}
         priority={true}
         loading="eager"
       />
