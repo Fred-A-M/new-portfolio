@@ -4,8 +4,8 @@ import Navbar from './components/NavBar';
 import Scroll from './Scroll';
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'Portfolio website',
+  title: 'fred-a-m.dev',
+  description: "Frederic Moore's Portfolio site",
 };
 
 export default function RootLayout({
