@@ -5,13 +5,9 @@ import {
   useTransform,
 } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { blobs1, blobs2, letters, lettersMobile } from '../consts';
+import { blobs1, blobs2, letters } from '../consts';
 
-interface HeaderProps {
-  isMobile?: boolean;
-}
-
-export default function Header({ isMobile = false }: HeaderProps) {
+export default function Header() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
@@ -75,8 +71,7 @@ export default function Header({ isMobile = false }: HeaderProps) {
   );
   const y1 = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0, 0, 25, 250]);
   const y2 = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0, 0, -25, -250]);
-
-  const letterMap = isMobile ? lettersMobile : letters;
+  const opacityScroll = useTransform(scrollYProgress, [0, 0.05], [1, 0]);
 
   return (
     <>
@@ -134,7 +129,7 @@ export default function Header({ isMobile = false }: HeaderProps) {
         </motion.svg>
       </div>
       <div className="fixed bottom-0 left-0 w-full h-full flex items-center justify-center pointer-events-none">
-        {letterMap.map((letter, index) => (
+        {letters.map((letter, index) => (
           <motion.span
             key={index}
             className="sm:text-4xl text-2xl whitespace-pre"
@@ -147,6 +142,11 @@ export default function Header({ isMobile = false }: HeaderProps) {
             {letter}
           </motion.span>
         ))}
+      </div>
+      <div className="fixed bottom-10 flex items-center justify-center pointer-events-none">
+        <motion.div style={{ opacity: opacityScroll }}>
+          {'[Scroll down]'}
+        </motion.div>
       </div>
     </>
   );

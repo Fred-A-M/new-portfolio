@@ -12,7 +12,7 @@ export default function NavBar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md px-5 sm:px-10">
+      <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-white/30 px-5 sm:px-10">
         <div className="flex h-20 relative items-center">
           {/* Left div - positioned at the start */}
           <div className="flex items-center md:text-4xl transition-all duration-300 text-2xl">
@@ -20,7 +20,10 @@ export default function NavBar() {
           </div>
 
           <div className="flex absolute text-2xl md:text-4xl right-0">
-            <button onClick={() => setIsOpen(!isOpen)} className="hover:cursor-pointer">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="hover:cursor-pointer"
+            >
               Menu
             </button>
           </div>
@@ -67,10 +70,16 @@ export default function NavBar() {
 
               {/* Social links in mobile menu */}
               <div className="flex gap-8 mt-8">
-                <Link href="https://www.instagram.com/" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="https://www.instagram.com/"
+                  onClick={() => setIsOpen(false)}
+                >
                   <FaInstagram size={30} />
                 </Link>
-                <Link href="https://www.linkedin.com/in/" onClick={() => setIsOpen(false)}>
+                <Link
+                  href="https://www.linkedin.com/in/"
+                  onClick={() => setIsOpen(false)}
+                >
                   <FaLinkedinIn size={30} />
                 </Link>
               </div>

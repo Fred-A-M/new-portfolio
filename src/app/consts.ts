@@ -1,7 +1,7 @@
 export const projects = [
   {
     name: 'Alice Dowdall: Portfolio',
-    client: 'Personal',
+    client: 'Alice Dowdall',
     roles: ['Developer', 'Designer'],
     tools: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
     tagline: 'A fun portfolio site for a \nsenior advertising creative',
@@ -26,7 +26,14 @@ export const projects = [
     name: 'Pokémon Explorer',
     client: 'Personal',
     roles: ['Developer', 'Designer'],
-    tools: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Apollo Client'],
+    tools: [
+      'React',
+      'Next.js',
+      'Tailwind CSS',
+      'TypeScript',
+      'GraphQL',
+      'Apollo Client',
+    ],
     tagline: 'A tool to explore the first 3 \n generations of Pokémon',
     description:
       'An interactive site I made to explore the first 3 generations of Pokémon. I used the public GraphQL PokéAPI to fetch the data. The user can browse through the first 3 generations of Pokémon, view their stats, and add them to a favourites list to compare later.',
@@ -92,8 +99,17 @@ export const profile = {
     'https://www.instagram.com/alice.revolt/',
     'https://www.linkedin.com/in/alice-revolt/',
   ],
-  worked: [{ name: 'Employer 1', dates: '2017-2021', link: 'https://employerswebsite' }],
-  workedWith: [{ brands: 'List of brands' }, { charities: 'List of charities' }],
+  worked: [
+    {
+      name: 'Employer 1',
+      dates: '2017-2021',
+      link: 'https://employerswebsite',
+    },
+  ],
+  workedWith: [
+    { brands: 'List of brands' },
+    { charities: 'List of charities' },
+  ],
 };
 
 export const features = [
@@ -126,41 +142,8 @@ export const blobs2 = [
   'M51,-22.9C62.9,-8.9,67.2,16.2,57.4,35.6C47.6,55.1,23.8,68.9,-1.5,69.8C-26.9,70.7,-53.8,58.6,-65.7,38C-77.5,17.3,-74.4,-11.9,-61,-26.8C-47.5,-41.7,-23.8,-42.2,-2.1,-41C19.6,-39.8,39.1,-36.9,51,-22.9Z',
 ];
 
-export const lettersMobile = [
-  'F',
-  'r',
-  'e',
-  'e',
-  'l',
-  'a',
-  'n',
-  'c',
-  'e ',
-  'w',
-  'e',
-  'b ',
-  'd',
-  'e',
-  'v',
-  'e',
-  'l',
-  'o',
-  'p',
-  'e',
-  'r ',
-];
-
 export const letters = [
-  'F',
-  'r',
-  'e',
-  'e',
-  'l',
-  'a',
-  'n',
-  'c',
-  'e ',
-  'w',
+  'W',
   'e',
   'b ',
   'd',
@@ -180,3 +163,6 @@ export const letters = [
   'o',
   'n',
 ];
+
+export const about =
+  'Hey, I’m a front-end developer who loves building fun, interactive stuff. I’m all about creating experiences that look great and feel even better to use. I’m still early in my career, but I’ve already spent a lot of time honing my skills and working on projects that challenge me creatively and technically. I’m always up for something new, especially if it’s playful, visually interesting, or just a bit different. If you’re looking for someone who’s enthusiastic and ready to dive in, let’s chat.';

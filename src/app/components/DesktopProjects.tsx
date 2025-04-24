@@ -37,11 +37,15 @@ export default function DesktopProjects() {
         <span className="w-full h-[1px] bg-black"></span>
       </div>
 
-      <div className="grid grid-cols-2 gap-20 w-full lg:w-[90%] mx-auto">
+      <div className="grid grid-cols-2 gap-20 w-full lg:w-[90%] mx-auto mb-20">
         {/* Left column with scrolling images */}
         <div className="flex flex-col gap-20">
           {projects.map(project => (
-            <Link href={project.link} className="flex w-full" key={project.name}>
+            <Link
+              href={project.link}
+              className="flex w-full"
+              key={project.name}
+            >
               <SlidingImage
                 src={project.image}
                 alt={project.name}

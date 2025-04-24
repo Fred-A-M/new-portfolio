@@ -31,15 +31,17 @@ export default function Main() {
   }
 
   return (
-    <div className={`flex justify-center ${!isMobile && 'min-h-[calc(100vh-150px)]'}`}>
+    <div
+      className={`flex justify-center ${!isMobile && 'min-h-[calc(100vh-150px)]'}`}
+    >
       {isMobile ? (
-        <div className="flex flex-col w-full items-center justify-center">
-          <Header isMobile={isMobile} />
+        <div className="flex flex-col gap-10 w-full items-center justify-center">
+          <Header />
           <MobileProjects />
           <Contact />
         </div>
       ) : (
-        <div className="flex flex-col w-full items-center justify-center">
+        <div className="flex flex-col gap-20 w-full items-center justify-center">
           <Header />
           <DesktopProjects />
           <Contact />

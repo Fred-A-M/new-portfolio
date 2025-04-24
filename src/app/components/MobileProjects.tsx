@@ -13,7 +13,11 @@ export default function DesktopProjects() {
       {/* Left column with scrolling images */}
       <div className="flex flex-col gap-10">
         {projects.map(project => (
-          <Link href={project.link} className="flex flex-col gap-2 w-full" key={project.name}>
+          <Link
+            href={project.link}
+            className="flex flex-col gap-2 w-full"
+            key={project.name}
+          >
             <Image
               src={project.image}
               alt={project.name}
