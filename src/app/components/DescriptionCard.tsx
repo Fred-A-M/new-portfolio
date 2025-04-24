@@ -20,7 +20,7 @@ export default function DescriptionCard({ isFlipped, activeProject }: Descriptio
       className="flex justify-end lg:justify-center pt-10 lg:pt-15"
     >
       <motion.div
-        className="sticky top-1/2 -translate-y-1/4 flex flex-col justify-center items-center shadow-xl bg-amber-100/20 h-32 lg:h-48 rounded-xs text-black border border-black w-full lg:w-[70%] text-center"
+        className="sticky top-1/2 -translate-y-1/4 flex flex-col justify-center items-center shadow-xl bg-[#FEFDF4] h-32 lg:h-48 rounded-xs text-black border border-black w-full lg:w-[70%] text-center"
         style={{
           transformStyle: 'preserve-3d',
         }}

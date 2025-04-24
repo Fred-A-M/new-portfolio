@@ -1,8 +1,12 @@
 import { motion, useAnimationControls, useScroll, useTransform } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { blobs1, blobs2 } from '../consts';
+import { blobs1, blobs2, letters, lettersMobile } from '../consts';
 
-export default function Header() {
+interface HeaderProps {
+  isMobile?: boolean;
+}
+
+export default function Header({ isMobile = false }: HeaderProps) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
 
@@ -35,12 +39,18 @@ export default function Header() {
   });
 
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [1, 2, 3]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.7, 0.05]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.7, 0.1]);
+  const opacityWords = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 0]);
+  const rotate = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0, 10, 180, 720]);
+  const y1 = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0, 0, 25, 250]);
+  const y2 = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0, 0, -25, -250]);
+
+  const letterMap = isMobile ? lettersMobile : letters;
 
   return (
     <>
       {/* Scrollable container */}
-      <div className="relative h-[200vh]" ref={ref}>
+      <div className="relative h-[300vh]" ref={ref}>
         {/* This div should be empty - no content here */}
       </div>
 
@@ -83,6 +93,17 @@ export default function Header() {
         >
           <motion.path fill="#6c63ff" animate={controlsBlob2} initial={{ d: blobs2[0] }} />
         </motion.svg>
+      </div>
+      <div className="fixed bottom-0 left-0 w-full h-full flex items-center justify-center">
+        {letterMap.map((letter, index) => (
+          <motion.span
+            key={index}
+            className="sm:text-4xl text-2xl whitespace-pre"
+            style={{ rotate, opacity: opacityWords, y: index % 2 === 0 ? y1 : y2 }}
+          >
+            {letter}
+          </motion.span>
+        ))}
       </div>
     </>
   );

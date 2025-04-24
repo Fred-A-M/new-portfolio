@@ -34,7 +34,7 @@ export default function Main() {
     <div className={`flex justify-center ${!isMobile && 'min-h-[calc(100vh-150px)]'}`}>
       {isMobile ? (
         <div className="flex flex-col w-full items-center justify-center">
-          <Header />
+          <Header isMobile={isMobile} />
           <MobileProjects />
           <Contact />
         </div>
