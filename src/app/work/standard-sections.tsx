@@ -70,7 +70,7 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
         muted
         playsInline
         preload="none"
-        poster={project.image.image}
+        poster={project.galleryMobile[0].image}
         className="rounded-xl border border-black shadow-xl"
         style={{ width: '150px', height: 'auto' }}
       >
@@ -83,7 +83,7 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
         muted
         playsInline
         preload="none"
-        poster={project.image.image}
+        poster={project.galleryMobile[1].image}
         className="rounded-xl border border-black shadow-xl"
         style={{ width: '150px', height: 'auto' }}
       >

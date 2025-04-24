@@ -67,7 +67,7 @@ export default function Header() {
   const rotate = useTransform(
     scrollYProgress,
     [0, 0.3, 0.5, 1],
-    [0, 10, 180, 720]
+    [0, 20, 180, 720]
   );
   const y1 = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0, 0, 25, 250]);
   const y2 = useTransform(scrollYProgress, [0, 0.3, 0.5, 1], [0, 0, -25, -250]);
