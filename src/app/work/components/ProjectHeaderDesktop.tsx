@@ -21,7 +21,11 @@ export default function ProjectHeaderDesktop({ project }: ProjectHeaderProps) {
   });
 
   const yTitle = useTransform(scrollYProgress, [0, 1], ['0vh', '-100vh']);
-  const yDescription = useTransform(scrollYProgress, [0, 0.7], ['100vh', '0vh']);
+  const yDescription = useTransform(
+    scrollYProgress,
+    [0, 0.7],
+    ['100vh', '0vh']
+  );
 
   return (
     <div className="relative h-[300vh] flex justify-center" ref={headerRef}>
@@ -64,7 +68,13 @@ export default function ProjectHeaderDesktop({ project }: ProjectHeaderProps) {
 
         {/* Right: sticky image stays put during scroll */}
         <div className="flex items-center justify-center">
-          <MacWindowFrame src={project.image} alt={project.name} width={550} height={400} />
+          <MacWindowFrame
+            mp4={project.image.mp4}
+            webm={project.image.webm}
+            alt={project.name}
+            width={550}
+            height={400}
+          />
         </div>
       </div>
     </div>

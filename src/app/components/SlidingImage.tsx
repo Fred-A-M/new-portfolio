@@ -4,8 +4,10 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 
 interface ImageProps {
-  src: string;
+  src?: string;
   alt: string;
+  mp4?: string;
+  webm?: string;
   rotation?: number;
   position?: {
     x: number | string;
@@ -21,6 +23,8 @@ interface ImageProps {
 export default function SlidingImage({
   src,
   alt,
+  mp4,
+  webm,
   rotation = 2,
   width,
   height,
@@ -68,23 +72,37 @@ export default function SlidingImage({
       transition={
         isInView
           ? {
-              duration: 0.5,
+              duration: 0.3,
               ease: 'easeInOut',
             }
           : {}
       }
       ref={ref}
     >
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className={`rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border-2 border-black`}
-        priority={true}
-        loading="eager"
-      />
-      <div className="">{alt}</div>
+      {!mp4 && !webm && (
+        <Image
+          src={src ?? ''}
+          alt={alt}
+          width={width}
+          height={height}
+          className={`rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border-2 border-black`}
+          priority
+          loading="eager"
+        />
+      )}
+      {mp4 && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border-2 border-black"
+        >
+          <source src={mp4} type="video/mp4" />
+          <source src={webm} type="video/webm" />
+        </video>
+      )}
+      <div className="pl-1">{alt}</div>
     </motion.div>
   );
 }

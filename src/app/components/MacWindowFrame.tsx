@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 interface MacWindowFrameProps {
-  src: string;
+  src?: string;
   alt: string;
   width?: number;
   height?: number;
@@ -36,9 +36,9 @@ export default function MacWindowFrame({
           ))}
         </div>
         {/* Image */}
-        {!mp4 && !webm && (
+        {!mp4 && !webm && src && (
           <Image
-            src={src}
+            src={src ?? ''}
             alt={alt}
             width={width}
             height={height}
@@ -51,7 +51,6 @@ export default function MacWindowFrame({
           <video autoPlay loop muted playsInline>
             <source src={mp4} type="video/mp4" />
             <source src={webm} type="video/webm" />
-            <Image src={src} alt={alt} width={width} height={height} />
           </video>
         )}
       </div>

@@ -1,10 +1,9 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { XMarkIcon } from '@heroicons/react/24/outline';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export default function NavBar() {
   const pathname = usePathname();
@@ -37,23 +36,21 @@ export default function NavBar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0.2, y: 300 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 flex flex-col"
+            className="fixed inset-0 z-50 flex flex-col text-2xl md:text-4xl"
             style={{ background: 'white' }}
           >
             <div className="flex justify-between items-center h-24 px-5 sm:px-10">
-              <div className="flex items-center text-2xl md:text-4xl">
+              <div className="flex items-center">
                 <Link href="/" onClick={() => setIsOpen(false)}>
                   Fred Moore
                 </Link>
               </div>
-              <button onClick={() => setIsOpen(false)}>
-                <XMarkIcon className="w-10 h-10" />
-              </button>
+              <button onClick={() => setIsOpen(false)}>Close</button>
             </div>
 
-            <div className="flex flex-col items-center justify-center flex-grow gap-10 radio-canada-big text-4xl">
+            <div className="flex flex-col items-center justify-center flex-grow gap-10">
               <Link
-                href="/"
+                href="/#work"
                 className={`${pathname === '/' ? 'font-bold' : 'hover:underline'}`}
                 onClick={() => setIsOpen(false)}
               >
@@ -61,7 +58,7 @@ export default function NavBar() {
               </Link>
 
               <Link
-                href="/contact"
+                href="/#contact"
                 className={`${pathname === '/contact' ? 'font-bold' : 'hover:underline'}`}
                 onClick={() => setIsOpen(false)}
               >
@@ -71,13 +68,13 @@ export default function NavBar() {
               {/* Social links in mobile menu */}
               <div className="flex gap-8 mt-8">
                 <Link
-                  href="https://www.instagram.com/"
+                  href="https://github.com/Fred-A-M"
                   onClick={() => setIsOpen(false)}
                 >
-                  <FaInstagram size={30} />
+                  <FaGithub size={30} />
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/"
+                  href="https://www.linkedin.com/in/frederic-moore/"
                   onClick={() => setIsOpen(false)}
                 >
                   <FaLinkedinIn size={30} />

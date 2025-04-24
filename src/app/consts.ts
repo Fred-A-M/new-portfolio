@@ -4,21 +4,32 @@ export const projects = [
     client: 'Alice Dowdall',
     roles: ['Developer', 'Designer'],
     tools: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
-    tagline: 'A fun portfolio site for a \nsenior advertising creative',
+    tagline: 'A fun portfolio site for a senior advertising\u00A0creative',
     description:
       'I created this portfolio site for Alice Dowdall, a senior advertising creative. She wanted a homepage where emoji-style eyes followed the cursor as the user browsed her projects.',
-    image: '/projects/AliceDowdall/desktop1.gif',
+    image: {
+      mp4: '/projects/AliceDowdall/desktop1.mp4',
+      webm: '/projects/AliceDowdall/desktop1.webm',
+    },
     galleryDesktop: [
       {
-        image: '/projects/AliceDowdall/desktop1.gif',
         mp4: '/projects/AliceDowdall/desktop1.mp4',
         webm: '/projects/AliceDowdall/desktop1.webm',
       },
-      { image: '/projects/AliceDowdall/desktop2.gif' },
+      {
+        mp4: '/projects/AliceDowdall/desktop2.mp4',
+        webm: '/projects/AliceDowdall/desktop2.webm',
+      },
     ],
     galleryMobile: [
-      { image: '/projects/AliceDowdall/mobile1.gif' },
-      { image: '/projects/AliceDowdall/mobile2.gif' },
+      {
+        mp4: '/projects/AliceDowdall/mobile1.mp4',
+        webm: '/projects/AliceDowdall/mobile1.webm',
+      },
+      {
+        mp4: '/projects/AliceDowdall/mobile2.mp4',
+        webm: '/projects/AliceDowdall/mobile2.webm',
+      },
     ],
     link: '/work/alice-dowdall',
   },
@@ -34,17 +45,32 @@ export const projects = [
       'GraphQL',
       'Apollo Client',
     ],
-    tagline: 'A tool to explore the first 3 \n generations of Pokémon',
+    tagline: 'A tool to explore the first 3\u00A0generations of\u00A0Pokémon',
     description:
       'An interactive site I made to explore the first 3 generations of Pokémon. I used the public GraphQL PokéAPI to fetch the data. The user can browse through the first 3 generations of Pokémon, view their stats, and add them to a favourites list to compare later.',
-    image: '/projects/Pokemon/desktop1.gif',
+    image: {
+      mp4: '/projects/Pokemon/desktop1.mp4',
+      webm: '/projects/Pokemon/desktop1.webm',
+    },
     galleryDesktop: [
-      { image: '/projects/Pokemon/desktop1.gif' },
-      { image: '/projects/Pokemon/desktop2.gif' },
+      {
+        mp4: '/projects/Pokemon/desktop1.mp4',
+        webm: '/projects/Pokemon/desktop1.webm',
+      },
+      {
+        mp4: '/projects/Pokemon/desktop2.mp4',
+        webm: '/projects/Pokemon/desktop2.webm',
+      },
     ],
     galleryMobile: [
-      { image: '/projects/Pokemon/mobile1.gif' },
-      { image: '/projects/Pokemon/mobile2.gif' },
+      {
+        mp4: '/projects/Pokemon/mobile1.mp4',
+        webm: '/projects/Pokemon/mobile1.webm',
+      },
+      {
+        mp4: '/projects/Pokemon/mobile2.mp4',
+        webm: '/projects/Pokemon/mobile2.webm',
+      },
     ],
     link: '/work/pokemon-explorer',
   },
@@ -53,17 +79,32 @@ export const projects = [
     client: 'Personal',
     roles: ['Developer', 'Designer'],
     tools: ['React', 'JavaScript', 'CSS', 'HTML', 'Tailwind CSS', 'Dall-E'],
-    tagline: "A turn-based 'trumps' game with \n mutant characters",
+    tagline: "A turn-based 'trumps' game with mutant\u00A0characters",
     description:
       "I created a 'Top Trumps' style game where the user plays against the computer to win the deck. I created the gameplay mechanics from scratch and designed the cards, with the mutant images generated using Dall-E.",
-    image: '/projects/MutantTrumps/desktop1.gif',
+    image: {
+      mp4: '/projects/MutantTrumps/desktop1.mp4',
+      webm: '/projects/MutantTrumps/desktop1.webm',
+    },
     galleryDesktop: [
-      { image: '/projects/MutantTrumps/desktop1.gif' },
-      { image: '/projects/MutantTrumps/desktop2.gif' },
+      {
+        mp4: '/projects/MutantTrumps/desktop1.mp4',
+        webm: '/projects/MutantTrumps/desktop1.webm',
+      },
+      {
+        mp4: '/projects/MutantTrumps/desktop2.mp4',
+        webm: '/projects/MutantTrumps/desktop2.webm',
+      },
     ],
     galleryMobile: [
-      { image: '/projects/MutantTrumps/mobile1.gif' },
-      { image: '/projects/MutantTrumps/mobile2.gif' },
+      {
+        mp4: '/projects/MutantTrumps/mobile1.mp4',
+        webm: '/projects/MutantTrumps/mobile1.webm',
+      },
+      {
+        mp4: '/projects/MutantTrumps/mobile2.mp4',
+        webm: '/projects/MutantTrumps/mobile2.webm',
+      },
     ],
     link: '/work/mutant-trumps',
   },
@@ -76,14 +117,18 @@ export interface Project {
   tools: string[];
   tagline: string;
   description: string;
-  image: string;
+  image: {
+    image?: string;
+    mp4?: string;
+    webm?: string;
+  };
   galleryDesktop: {
-    image: string;
+    image?: string;
     mp4?: string;
     webm?: string;
   }[];
   galleryMobile: {
-    image: string;
+    image?: string;
     mp4?: string;
     webm?: string;
   }[];
@@ -165,4 +210,23 @@ export const letters = [
 ];
 
 export const about =
-  'Hey, I’m a front-end developer who loves building fun, interactive stuff. I’m all about creating experiences that look great and feel even better to use. I’m still early in my career, but I’ve already spent a lot of time honing my skills and working on projects that challenge me creatively and technically. I’m always up for something new, especially if it’s playful, visually interesting, or just a bit different. If you’re looking for someone who’s enthusiastic and ready to dive in, let’s chat.';
+  "Hey, I'm a front-end developer who loves building fun, interactive stuff. I'm keen to create digital experiences that look great and feel even better to use. I'm always up for something new, especially if it's playful, visually interesting, or just a bit different. If you're looking for someone who's enthusiastic and ready to dive in, let's\u00A0chat.";
+
+export const tools = [
+  'JavaScript',
+  'TypeScript',
+  'React.js',
+  'Next.js',
+  'Node.js',
+  'Express.js',
+  'Koa.js',
+  'MongoDB',
+  'PostgreSQL',
+  'Mongoose ORM',
+  'Sequelize ORM',
+  'Tailwind CSS',
+  'Framer Motion',
+  'Supabase',
+  'Tanstack Query',
+  'JQuery',
+];

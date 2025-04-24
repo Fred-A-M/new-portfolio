@@ -31,9 +31,9 @@ export default function DesktopProjects() {
   }, [activeProject]);
 
   return (
-    <div className="flex flex-col gap-10 w-full">
+    <div id="work" className="flex flex-col gap-10 w-full scroll-mt-24">
       <div className="flex flex-col gap-1">
-        <div className="text-lg">Work</div>
+        <div className="text-xl">Work</div>
         <span className="w-full h-[1px] bg-black"></span>
       </div>
 
@@ -47,7 +47,8 @@ export default function DesktopProjects() {
               key={project.name}
             >
               <SlidingImage
-                src={project.image}
+                mp4={project.image.mp4}
+                webm={project.image.webm}
                 alt={project.name}
                 width={600}
                 height={600}

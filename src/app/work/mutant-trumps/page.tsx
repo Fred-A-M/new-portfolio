@@ -2,9 +2,8 @@
 import MobileProjectPage from '@/app/work/components/MobileProjectPage';
 import { Project, projects } from '@/app/consts';
 import { useEffect, useState } from 'react';
-import { MutantTrumpsSections, MutantTrumpsSectionsMobile } from './sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
-
+import { StandardSections, StandardSectionsMobile } from '../standard-sections';
 export default function MutantTrumps() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -33,12 +32,12 @@ export default function MutantTrumps() {
       {isMobile ? (
         <MobileProjectPage
           project={project as Project}
-          sections={MutantTrumpsSectionsMobile(project as Project)}
+          sections={StandardSectionsMobile(project as Project)}
         />
       ) : (
         <DesktopProjectPage
           project={project as Project}
-          sections={MutantTrumpsSections(project as Project)}
+          sections={StandardSections(project as Project)}
         />
       )}
     </>

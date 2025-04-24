@@ -2,7 +2,7 @@
 import MobileProjectPage from '@/app/work/components/MobileProjectPage';
 import { Project, projects } from '@/app/consts';
 import { useEffect, useState } from 'react';
-import { PokemonExplorerSections, PokemonExplorerSectionsMobile } from './sections';
+import { StandardSections, StandardSectionsMobile } from '../standard-sections';
 import DesktopProjectPage from '../components/DesktopProjectPage';
 
 export default function PokemonExplorer() {
@@ -33,12 +33,12 @@ export default function PokemonExplorer() {
       {isMobile ? (
         <MobileProjectPage
           project={project as Project}
-          sections={PokemonExplorerSectionsMobile(project as Project)}
+          sections={StandardSectionsMobile(project as Project)}
         />
       ) : (
         <DesktopProjectPage
           project={project as Project}
-          sections={PokemonExplorerSections(project as Project)}
+          sections={StandardSections(project as Project)}
         />
       )}
     </>
