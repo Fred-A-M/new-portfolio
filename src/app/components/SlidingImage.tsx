@@ -90,7 +90,7 @@ export default function SlidingImage({
           loading="eager"
         />
       )}
-      {mp4 && isInView && (
+      {mp4 && (
         <video
           autoPlay
           loop

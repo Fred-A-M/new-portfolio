@@ -69,6 +69,8 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
         loop
         muted
         playsInline
+        preload="none"
+        poster={project.image.image}
         className="rounded-xl border border-black shadow-xl"
         style={{ width: '150px', height: 'auto' }}
       >
@@ -80,6 +82,8 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
         loop
         muted
         playsInline
+        preload="none"
+        poster={project.image.image}
         className="rounded-xl border border-black shadow-xl"
         style={{ width: '150px', height: 'auto' }}
       >

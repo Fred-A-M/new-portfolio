@@ -48,7 +48,7 @@ export default function MacWindowFrame({
           />
         )}
         {mp4 && (
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline preload="none" poster={src}>
             <source src={mp4} type="video/mp4" />
             <source src={webm} type="video/webm" />
           </video>
