@@ -90,12 +90,14 @@ export default function SlidingImage({
           loading="eager"
         />
       )}
-      {mp4 && (
+      {mp4 && isInView && (
         <video
           autoPlay
           loop
           muted
           playsInline
+          preload="none"
+          poster={src} // optional fallback image
           className="rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border-2 border-black"
         >
           <source src={mp4} type="video/mp4" />

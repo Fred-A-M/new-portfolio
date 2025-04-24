@@ -10,25 +10,30 @@ export const projects = [
     image: {
       mp4: '/projects/AliceDowdall/desktop1.mp4',
       webm: '/projects/AliceDowdall/desktop1.webm',
+      image: '/projects/AliceDowdall/desktop1.png',
     },
     galleryDesktop: [
       {
         mp4: '/projects/AliceDowdall/desktop1.mp4',
         webm: '/projects/AliceDowdall/desktop1.webm',
+        image: '/projects/AliceDowdall/desktop1.png',
       },
       {
         mp4: '/projects/AliceDowdall/desktop2.mp4',
         webm: '/projects/AliceDowdall/desktop2.webm',
+        image: '/projects/AliceDowdall/desktop2.png',
       },
     ],
     galleryMobile: [
       {
         mp4: '/projects/AliceDowdall/mobile1.mp4',
         webm: '/projects/AliceDowdall/mobile1.webm',
+        image: '/projects/AliceDowdall/mobile1.png',
       },
       {
         mp4: '/projects/AliceDowdall/mobile2.mp4',
         webm: '/projects/AliceDowdall/mobile2.webm',
+        image: '/projects/AliceDowdall/mobile2.png',
       },
     ],
     link: '/work/alice-dowdall',
@@ -51,25 +56,30 @@ export const projects = [
     image: {
       mp4: '/projects/Pokemon/desktop1.mp4',
       webm: '/projects/Pokemon/desktop1.webm',
+      image: '/projects/Pokemon/desktop1.png',
     },
     galleryDesktop: [
       {
         mp4: '/projects/Pokemon/desktop1.mp4',
         webm: '/projects/Pokemon/desktop1.webm',
+        image: '/projects/Pokemon/desktop1.png',
       },
       {
         mp4: '/projects/Pokemon/desktop2.mp4',
         webm: '/projects/Pokemon/desktop2.webm',
+        image: '/projects/Pokemon/desktop2.png',
       },
     ],
     galleryMobile: [
       {
         mp4: '/projects/Pokemon/mobile1.mp4',
         webm: '/projects/Pokemon/mobile1.webm',
+        image: '/projects/Pokemon/mobile1.png',
       },
       {
         mp4: '/projects/Pokemon/mobile2.mp4',
         webm: '/projects/Pokemon/mobile2.webm',
+        image: '/projects/Pokemon/mobile2.png',
       },
     ],
     link: '/work/pokemon-explorer',
@@ -85,25 +95,30 @@ export const projects = [
     image: {
       mp4: '/projects/MutantTrumps/desktop1.mp4',
       webm: '/projects/MutantTrumps/desktop1.webm',
+      image: '/projects/MutantTrumps/desktop1.png',
     },
     galleryDesktop: [
       {
         mp4: '/projects/MutantTrumps/desktop1.mp4',
         webm: '/projects/MutantTrumps/desktop1.webm',
+        image: '/projects/MutantTrumps/desktop1.png',
       },
       {
         mp4: '/projects/MutantTrumps/desktop2.mp4',
         webm: '/projects/MutantTrumps/desktop2.webm',
+        image: '/projects/MutantTrumps/desktop2.png',
       },
     ],
     galleryMobile: [
       {
         mp4: '/projects/MutantTrumps/mobile1.mp4',
         webm: '/projects/MutantTrumps/mobile1.webm',
+        image: '/projects/MutantTrumps/mobile1.png',
       },
       {
         mp4: '/projects/MutantTrumps/mobile2.mp4',
         webm: '/projects/MutantTrumps/mobile2.webm',
+        image: '/projects/MutantTrumps/mobile2.png',
       },
     ],
     link: '/work/mutant-trumps',
