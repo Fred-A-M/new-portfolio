@@ -5,6 +5,7 @@ import { useState } from 'react';
 import DesktopProjects from './components/DesktopProjects';
 import Header from './components/Header';
 import MobileProjects from './components/MobileProjects';
+import Contact from './components/Contact';
 export default function Main() {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -35,13 +36,13 @@ export default function Main() {
         <div className="flex flex-col w-full items-center justify-center">
           <Header />
           <MobileProjects />
-          <Header />
+          <Contact />
         </div>
       ) : (
         <div className="flex flex-col w-full items-center justify-center">
           <Header />
           <DesktopProjects />
-          <Header />
+          <Contact />
         </div>
       )}
     </div>

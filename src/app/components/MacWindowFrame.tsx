@@ -7,6 +7,8 @@ interface MacWindowFrameProps {
   width?: number;
   height?: number;
   className?: string;
+  mp4?: string;
+  webm?: string;
 }
 
 export default function MacWindowFrame({
@@ -15,6 +17,8 @@ export default function MacWindowFrame({
   width = 800,
   height = 600,
   className = '',
+  mp4,
+  webm,
 }: MacWindowFrameProps) {
   return (
     <div
@@ -32,15 +36,24 @@ export default function MacWindowFrame({
           ))}
         </div>
         {/* Image */}
-        <Image
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className="h-auto w-full"
-          priority
-          loading="eager"
-        />
+        {!mp4 && !webm && (
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            className="h-auto w-full"
+            priority
+            loading="eager"
+          />
+        )}
+        {mp4 && (
+          <video autoPlay loop muted playsInline>
+            <source src={mp4} type="video/mp4" />
+            <source src={webm} type="video/webm" />
+            <Image src={src} alt={alt} width={width} height={height} />
+          </video>
+        )}
       </div>
     </div>
   );
