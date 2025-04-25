@@ -5,7 +5,8 @@ import { Project } from '../consts';
 export default function MobileImage({ project }: { project: Project }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.1,
+    rootMargin: '100px 0px',
   });
 
   return (
@@ -16,8 +17,8 @@ export default function MobileImage({ project }: { project: Project }) {
           loop
           muted
           playsInline
-          preload="none"
-          poster={project.image.image} // optional fallback image
+          preload="auto"
+          poster={project.image.image}
           className="rounded-xl rounded-br-[100px] shadow-lg border-2 border-black"
         >
           <source src={project.image.webm} type="video/webm" />

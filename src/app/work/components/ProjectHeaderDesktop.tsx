@@ -69,8 +69,9 @@ export default function ProjectHeaderDesktop({ project }: ProjectHeaderProps) {
         {/* Right: sticky image stays put during scroll */}
         <div className="flex items-center justify-center">
           <MacWindowFrame
-            mp4={project.image.mp4}
-            webm={project.image.webm}
+            mp4={project.galleryDesktop[0].mp4}
+            webm={project.galleryDesktop[0].webm}
+            src={project.galleryDesktop[0].image}
             alt={project.name}
             width={550}
             height={400}
