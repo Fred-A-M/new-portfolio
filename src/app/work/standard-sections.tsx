@@ -1,6 +1,6 @@
 import MacWindowFrame from '@/app/components/MacWindowFrame';
 import { Project } from '@/app/consts';
-
+import ClickToPlayVideo from './components/ClickToPlayVideo';
 import { ReactNode } from 'react';
 
 // Create a function that takes the project and returns the sections
@@ -59,39 +59,23 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
       <MacWindowFrame
         mp4={project.galleryDesktop[1].mp4}
         webm={project.galleryDesktop[1].webm}
-        src={project.image.image}
+        src={project.galleryDesktop[1].image}
         alt={project.name}
         width={900}
         height={600}
       />
     </div>,
     <div className="flex max-w-full items-center justify-center gap-20" key={3}>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="none"
-        poster={project.galleryMobile[0].image}
-        className="rounded-xl border border-black shadow-xl"
-        style={{ width: '150px', height: 'auto' }}
-      >
-        <source src={project.galleryMobile[0].mp4} type="video/mp4" />
-        <source src={project.galleryMobile[0].webm} type="video/webm" />
-      </video>
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="none"
-        poster={project.galleryMobile[1].image}
-        className="rounded-xl border border-black shadow-xl"
-        style={{ width: '150px', height: 'auto' }}
-      >
-        <source src={project.galleryMobile[1].mp4} type="video/mp4" />
-        <source src={project.galleryMobile[1].webm} type="video/webm" />
-      </video>
+      <ClickToPlayVideo
+        mp4={project.galleryMobile[0].mp4 ?? ''}
+        webm={project.galleryMobile[0].webm ?? ''}
+        poster={project.galleryMobile[0].image ?? ''}
+      />
+      <ClickToPlayVideo
+        mp4={project.galleryMobile[1].mp4 ?? ''}
+        webm={project.galleryMobile[1].webm ?? ''}
+        poster={project.galleryMobile[1].image ?? ''}
+      />
     </div>,
   ];
 };

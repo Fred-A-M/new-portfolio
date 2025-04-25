@@ -10,8 +10,6 @@ export default function ProjectHeaderMobile({ project }: ProjectHeaderProps) {
     <div className="flex flex-col w-full gap-10">
       <div className="self-center">
         <MacWindowFrame
-          mp4={project.galleryDesktop[0].mp4}
-          webm={project.galleryDesktop[0].webm}
           src={project.galleryDesktop[0].image}
           alt={project.name}
           width={900}
