@@ -11,17 +11,20 @@ export const projects = [
       mp4: '/projects/AliceDowdall/desktop1.mp4',
       webm: '/projects/AliceDowdall/desktop1.webm',
       image: '/projects/AliceDowdall/desktop1.png',
+      gif: '/projects/AliceDowdall/desktop1.gif',
     },
     galleryDesktop: [
       {
         mp4: '/projects/AliceDowdall/desktop1.mp4',
         webm: '/projects/AliceDowdall/desktop1.webm',
         image: '/projects/AliceDowdall/desktop1.png',
+        gif: '/projects/AliceDowdall/desktop1.gif',
       },
       {
         mp4: '/projects/AliceDowdall/desktop2.mp4',
         webm: '/projects/AliceDowdall/desktop2.webm',
         image: '/projects/AliceDowdall/desktop2.png',
+        gif: '/projects/AliceDowdall/desktop2.gif',
       },
     ],
     galleryMobile: [
@@ -29,6 +32,7 @@ export const projects = [
         mp4: '/projects/AliceDowdall/mobile1.mp4',
         webm: '/projects/AliceDowdall/mobile1.webm',
         image: '/projects/AliceDowdall/mobile1.png',
+        gif: '/projects/AliceDowdall/mobile1.gif',
       },
       {
         mp4: '/projects/AliceDowdall/mobile2.mp4',
@@ -57,17 +61,20 @@ export const projects = [
       mp4: '/projects/Pokemon/desktop1.mp4',
       webm: '/projects/Pokemon/desktop1.webm',
       image: '/projects/Pokemon/desktop1.png',
+      gif: '/projects/Pokemon/desktop1.gif',
     },
     galleryDesktop: [
       {
         mp4: '/projects/Pokemon/desktop1.mp4',
         webm: '/projects/Pokemon/desktop1.webm',
         image: '/projects/Pokemon/desktop1.png',
+        gif: '/projects/Pokemon/desktop1.gif',
       },
       {
         mp4: '/projects/Pokemon/desktop2.mp4',
         webm: '/projects/Pokemon/desktop2.webm',
         image: '/projects/Pokemon/desktop2.png',
+        gif: '/projects/Pokemon/desktop2.gif',
       },
     ],
     galleryMobile: [
@@ -96,17 +103,20 @@ export const projects = [
       mp4: '/projects/MutantTrumps/desktop1.mp4',
       webm: '/projects/MutantTrumps/desktop1.webm',
       image: '/projects/MutantTrumps/desktop1.png',
+      gif: '/projects/MutantTrumps/desktop1.gif',
     },
     galleryDesktop: [
       {
         mp4: '/projects/MutantTrumps/desktop1.mp4',
         webm: '/projects/MutantTrumps/desktop1.webm',
         image: '/projects/MutantTrumps/desktop1.png',
+        gif: '/projects/MutantTrumps/desktop1.gif',
       },
       {
         mp4: '/projects/MutantTrumps/desktop2.mp4',
         webm: '/projects/MutantTrumps/desktop2.webm',
         image: '/projects/MutantTrumps/desktop2.png',
+        gif: '/projects/MutantTrumps/desktop2.gif',
       },
     ],
     galleryMobile: [
@@ -119,6 +129,7 @@ export const projects = [
         mp4: '/projects/MutantTrumps/mobile2.mp4',
         webm: '/projects/MutantTrumps/mobile2.webm',
         image: '/projects/MutantTrumps/mobile2.png',
+        gif: '/projects/MutantTrumps/mobile2.gif',
       },
     ],
     link: '/work/mutant-trumps',
@@ -133,19 +144,22 @@ export interface Project {
   tagline: string;
   description: string;
   image: {
-    image?: string;
+    image: string;
     mp4?: string;
     webm?: string;
+    gif?: string;
   };
   galleryDesktop: {
-    image?: string;
+    image: string;
     mp4?: string;
     webm?: string;
+    gif?: string;
   }[];
   galleryMobile: {
-    image?: string;
+    image: string;
     mp4?: string;
     webm?: string;
+    gif?: string;
   }[];
   video?: string;
   link: string;

@@ -38,7 +38,7 @@ export default function MacWindowFrame({
         {/* Image */}
         {!mp4 && !webm && src && (
           <Image
-            src={src ?? ''}
+            src={src}
             alt={alt}
             width={width}
             height={height}

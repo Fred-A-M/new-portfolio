@@ -1,5 +1,5 @@
 import { projects } from '../consts';
-import MobileImage from './MobileImage';
+import Image from 'next/image';
 
 export default function MobileProjects() {
   return (
@@ -12,7 +12,16 @@ export default function MobileProjects() {
       {/* Left column with scrolling images */}
       <div className="flex flex-col gap-16">
         {projects.map(project => (
-          <MobileImage key={project.name} project={project} />
+          <Image
+            key={project.name}
+            src={project.image.gif ?? project.image.image}
+            alt={project.name}
+            width={900}
+            height={600}
+            className="rounded-xl rounded-br-[100px] shadow-lg border-2 border-black h-auto w-full"
+            priority
+            loading="eager"
+          />
         ))}
       </div>
     </div>

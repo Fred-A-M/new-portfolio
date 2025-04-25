@@ -1,8 +1,7 @@
 import MacWindowFrame from '@/app/components/MacWindowFrame';
 import { Project } from '@/app/consts';
-import ClickToPlayVideo from './components/ClickToPlayVideo';
 import { ReactNode } from 'react';
-
+import Image from 'next/image';
 // Create a function that takes the project and returns the sections
 export const StandardSections = (project: Project): ReactNode[] => {
   return [
@@ -57,24 +56,26 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
     </div>,
     <div className="flex flex-col items-center justify-center w-full" key={2}>
       <MacWindowFrame
-        mp4={project.galleryDesktop[1].mp4}
-        webm={project.galleryDesktop[1].webm}
-        src={project.galleryDesktop[1].image}
+        src={project.galleryDesktop[1].gif ?? project.galleryDesktop[1].image}
         alt={project.name}
         width={900}
         height={600}
       />
     </div>,
     <div className="flex max-w-full items-center justify-center gap-20" key={3}>
-      <ClickToPlayVideo
-        mp4={project.galleryMobile[0].mp4 ?? ''}
-        webm={project.galleryMobile[0].webm ?? ''}
-        poster={project.galleryMobile[0].image ?? ''}
+      <Image
+        src={project.galleryMobile[0].gif ?? project.galleryMobile[0].image}
+        alt={project.name}
+        width={150}
+        height={150}
+        className="rounded-xl border border-black shadow-xl"
       />
-      <ClickToPlayVideo
-        mp4={project.galleryMobile[1].mp4 ?? ''}
-        webm={project.galleryMobile[1].webm ?? ''}
-        poster={project.galleryMobile[1].image ?? ''}
+      <Image
+        src={project.galleryMobile[1].gif ?? project.galleryMobile[1].image}
+        alt={project.name}
+        width={150}
+        height={150}
+        className="rounded-xl border border-black shadow-xl"
       />
     </div>,
   ];
