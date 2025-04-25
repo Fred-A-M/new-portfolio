@@ -26,6 +26,25 @@ export default function Main() {
     setMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (mounted) {
+      // Check if there's a hash in the URL
+      const hash = window.location.hash;
+      if (hash) {
+        // Remove the # character
+        const id = hash.substring(1);
+        // Find the element with the matching ID
+        const element = document.getElementById(id);
+        if (element) {
+          // Wait a moment for the page to fully render
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    }
+  }, [mounted]);
+
   if (!mounted) {
     return <div className="h-[700px]"></div>;
   }

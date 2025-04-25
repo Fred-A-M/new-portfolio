@@ -13,7 +13,7 @@ export default function Contact() {
         <div className="sm:text-xl text-lg">Contact</div>
         <span className="w-full h-[1px] bg-black"></span>
       </div>
-      <div className="flex flex-col lg:w-[80%] w-full gap-10 sm:text-2xl text-2xl">
+      <div className="flex flex-col lg:w-[80%] w-full gap-10 sm:text-2xl text-xl">
         <p className="text-color">{about}</p>
         <p>
           Currently freelancing part-time at{' '}
@@ -39,7 +39,7 @@ export default function Contact() {
           </a>
           , or use the links below.
         </p>
-        <div className="flex justify-center gap-10">
+        <div className="flex gap-10">
           <Link href="https://github.com/Fred-A-M">
             <FaGithub className="sm:w-15 sm:h-15 w-10 h-10" />
           </Link>

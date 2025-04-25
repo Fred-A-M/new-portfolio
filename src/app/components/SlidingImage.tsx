@@ -85,7 +85,7 @@ export default function SlidingImage({
           alt={alt}
           width={width}
           height={height}
-          className={`rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border-2 border-black`}
+          className={`rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border border-black`}
           priority
           loading="eager"
         />
@@ -98,7 +98,7 @@ export default function SlidingImage({
           playsInline
           preload="none"
           poster={src} // optional fallback image
-          className="rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border-2 border-black"
+          className="rounded-xl rounded-br-[100px] hover:rounded-br-xl object-contain transition-all duration-300 shadow-lg border border-black"
         >
           <source src={mp4} type="video/mp4" />
           <source src={webm} type="video/webm" />

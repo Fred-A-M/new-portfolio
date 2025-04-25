@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const StandardSections = (project: Project): ReactNode[] => {
   return [
     <div key={0} className="flex justify-center w-full">
-      <div className="">
+      <div className="text-xl">
         <p>{project.description}</p>
       </div>
     </div>,
@@ -63,20 +63,24 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
       />
     </div>,
     <div className="flex max-w-full items-center justify-center gap-20" key={3}>
-      <Image
-        src={project.galleryMobile[0].gif ?? project.galleryMobile[0].image}
-        alt={project.name}
-        width={150}
-        height={150}
-        className="rounded-xl border border-black shadow-xl"
-      />
-      <Image
-        src={project.galleryMobile[1].gif ?? project.galleryMobile[1].image}
-        alt={project.name}
-        width={150}
-        height={150}
-        className="rounded-xl border border-black shadow-xl"
-      />
+      <div className="w-[200px] flex items-center justify-center">
+        <Image
+          src={project.galleryMobile[0].gif ?? project.galleryMobile[0].image}
+          alt={project.name}
+          width={200}
+          height={0}
+          className="rounded-xl border border-black shadow-xl w-full h-auto"
+        />
+      </div>
+      <div className="w-[200px] flex items-center justify-center">
+        <Image
+          src={project.galleryMobile[1].gif ?? project.galleryMobile[1].image}
+          alt={project.name}
+          width={200}
+          height={0}
+          className="rounded-xl border border-black shadow-xl w-full h-auto"
+        />
+      </div>
     </div>,
   ];
 };

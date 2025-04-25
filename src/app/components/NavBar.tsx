@@ -50,7 +50,12 @@ export default function NavBar() {
               <Link
                 href="/#work"
                 className="hover:underline"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#work';
+                  }
+                }}
               >
                 Work
               </Link>
@@ -58,7 +63,12 @@ export default function NavBar() {
               <Link
                 href="/#contact"
                 className="hover:underline"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  if (window.location.pathname !== '/') {
+                    window.location.href = '/#contact';
+                  }
+                }}
               >
                 Contact
               </Link>

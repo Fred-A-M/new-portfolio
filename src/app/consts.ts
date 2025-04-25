@@ -41,6 +41,7 @@ export const projects = [
       },
     ],
     link: '/work/alice-dowdall',
+    website: 'https://alice-dowdall.vercel.app/',
   },
   {
     name: 'Pokémon Explorer',
@@ -90,6 +91,45 @@ export const projects = [
       },
     ],
     link: '/work/pokemon-explorer',
+    website: 'https://pokemon-explorer-tau.vercel.app/',
+  },
+  {
+    name: 'Goss',
+    client: 'Goss',
+    roles: ['Full Stack Developer'],
+    tools: [
+      'Next.js',
+      'Supabase',
+      'Tailwind CSS',
+      'PlayHT API',
+      'Wavesurfer.js',
+    ],
+    tagline: 'A social media platform for voice\u00A0notes',
+    description:
+      'Worked in a team of 5 developers to develop a full-featured social network that centred around users posting voice notes, transcription functionality, and live-chat. We used Supabase for the database and authentication, and PlayHT for the text-to-speech functionality.',
+    image: {
+      mp4: '/projects/Goss/desktop1.mp4',
+      webm: '/projects/Goss/desktop1.webm',
+      image: '/projects/Goss/desktop1.png',
+      gif: '/projects/Goss/desktop1.gif',
+    },
+    galleryDesktop: [
+      {
+        mp4: '/projects/Goss/desktop1.mp4',
+        webm: '/projects/Goss/desktop1.webm',
+        image: '/projects/Goss/desktop1.png',
+        gif: '/projects/Goss/desktop1.gif',
+      },
+    ],
+    galleryMobile: [
+      {
+        image: '/projects/Goss/mobile1.png',
+      },
+      {
+        image: '/projects/Goss/mobile2.png',
+      },
+    ],
+    link: '/work/goss',
   },
   {
     name: 'Mutant Trumps',
@@ -133,6 +173,7 @@ export const projects = [
       },
     ],
     link: '/work/mutant-trumps',
+    website: 'https://mutant-trumps.vercel.app/',
   },
 ];
 
@@ -163,6 +204,7 @@ export interface Project {
   }[];
   video?: string;
   link: string;
+  website?: string;
 }
 
 export const profile = {

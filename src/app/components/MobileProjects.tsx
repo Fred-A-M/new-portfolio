@@ -23,7 +23,7 @@ export default function MobileProjects() {
               alt={project.name}
               width={900}
               height={600}
-              className="rounded-xl rounded-br-[100px] shadow-lg border-2 border-black h-auto w-full"
+              className="rounded-xl rounded-br-[100px] shadow-lg border border-black h-auto w-full"
               priority
               loading="eager"
             />
