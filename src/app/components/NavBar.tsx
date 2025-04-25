@@ -1,12 +1,10 @@
 'use client';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export default function NavBar() {
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -51,7 +49,7 @@ export default function NavBar() {
             <div className="flex flex-col items-center justify-center flex-grow gap-10">
               <Link
                 href="/#work"
-                className={`${pathname === '/' ? 'font-bold' : 'hover:underline'}`}
+                className="hover:underline"
                 onClick={() => setIsOpen(false)}
               >
                 Work
@@ -59,7 +57,7 @@ export default function NavBar() {
 
               <Link
                 href="/#contact"
-                className={`${pathname === '/contact' ? 'font-bold' : 'hover:underline'}`}
+                className="hover:underline"
                 onClick={() => setIsOpen(false)}
               >
                 Contact

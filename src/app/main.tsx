@@ -36,7 +36,7 @@ export default function Main() {
     >
       <div
         className={`flex flex-col w-full items-center justify-center 
-          ${isMobile ? 'gap-10' : 'gap-20'}`}
+          ${isMobile ? 'gap-15' : 'gap-20'}`}
       >
         <Header />
         {isMobile ? <MobileProjects /> : <DesktopProjects />}
