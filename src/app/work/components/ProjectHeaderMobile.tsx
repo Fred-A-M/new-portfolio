@@ -8,7 +8,7 @@ interface ProjectHeaderProps {
 export default function ProjectHeaderMobile({ project }: ProjectHeaderProps) {
   return (
     <div className="flex flex-col w-full gap-10">
-      <div className="self-center">
+      <div className="self-center w-full">
         <MacWindowFrame
           src={project.galleryDesktop[0].gif ?? project.galleryDesktop[0].image}
           alt={project.name}
