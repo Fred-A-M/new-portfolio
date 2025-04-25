@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     description: 'Fred Moore: Web Developer, London, UK',
     images: [
       {
-        url: '/fred-a-m.png', // Path relative to the public directory
-        width: 1200,
-        height: 1200,
+        url: '/logo.png', // Path relative to the public directory
+        width: 731,
+        height: 731,
         alt: 'Fred Moore - Web Developer',
       },
     ],

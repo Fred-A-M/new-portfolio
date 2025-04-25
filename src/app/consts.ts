@@ -108,17 +108,17 @@ export const projects = [
     description:
       'Worked in a team of 5 developers to develop a full-featured social network that centred around users posting voice notes, transcription functionality, and live-chat. We used Supabase for the database and authentication, and PlayHT for the text-to-speech functionality.',
     image: {
-      mp4: '/projects/Goss/desktop1.mp4',
-      webm: '/projects/Goss/desktop1.webm',
-      image: '/projects/Goss/desktop1.png',
-      gif: '/projects/Goss/desktop1.gif',
+      mp4: '/projects/Goss/Desktop1.mp4',
+      webm: '/projects/Goss/Desktop1.webm',
+      image: '/projects/Goss/Desktop1.png',
+      gif: '/projects/Goss/Desktop1.gif',
     },
     galleryDesktop: [
       {
-        mp4: '/projects/Goss/desktop1.mp4',
-        webm: '/projects/Goss/desktop1.webm',
-        image: '/projects/Goss/desktop1.png',
-        gif: '/projects/Goss/desktop1.gif',
+        mp4: '/projects/Goss/Desktop1.mp4',
+        webm: '/projects/Goss/Desktop1.webm',
+        image: '/projects/Goss/Desktop1.png',
+        gif: '/projects/Goss/Desktop1.gif',
       },
     ],
     galleryMobile: [
