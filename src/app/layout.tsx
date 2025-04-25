@@ -5,7 +5,24 @@ import Scroll from './Scroll';
 
 export const metadata: Metadata = {
   title: 'fred-a-m.dev',
-  description: "Frederic Moore's Portfolio site",
+  description: 'Fred Moore: Web Developer, London, UK',
+  openGraph: {
+    title: 'fred-a-m.dev',
+    description: 'Fred Moore: Web Developer, London, UK',
+    images: [
+      {
+        url: '/fred-a-m.png', // Path relative to the public directory
+        width: 1200,
+        height: 1200,
+        alt: 'Fred Moore - Web Developer',
+      },
+    ],
+    type: 'website',
+  },
+  icons: {
+    icon: '/blob2.svg',
+    apple: '/blob2.svg',
+  },
 };
 
 export default function RootLayout({
