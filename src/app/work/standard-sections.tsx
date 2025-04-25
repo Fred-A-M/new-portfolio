@@ -15,7 +15,7 @@ export const StandardSections = (project: Project): ReactNode[] => {
       <MacWindowFrame
         mp4={project.galleryDesktop[1].mp4}
         webm={project.galleryDesktop[1].webm}
-        src={project.image.image}
+        src={project.galleryDesktop[1].image}
         alt={project.name}
         width={900}
         height={600}

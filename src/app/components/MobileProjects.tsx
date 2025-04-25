@@ -10,7 +10,7 @@ export default function MobileProjects() {
       </div>
 
       {/* Left column with scrolling images */}
-      <div className="flex flex-col gap-15">
+      <div className="flex flex-col gap-16">
         {projects.map(project => (
           <MobileImage key={project.name} project={project} />
         ))}
