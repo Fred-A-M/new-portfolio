@@ -34,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <Scroll />
       <body className={`h-screen`}>
+        <div className="background-grid" />
         <Navbar />
         <main className="px-5 sm:px-10 pb-10">{children}</main>
       </body>
