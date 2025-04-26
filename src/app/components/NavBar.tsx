@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-white/30 px-5 sm:px-10">
-        <div className="flex h-20 relative items-center">
+        <div className="flex h-16 sm:h-18 relative items-center">
           {/* Left div - positioned at the start */}
           <div className="flex items-center md:text-4xl transition-all duration-300 text-2xl">
             <Link href="/">Fred Moore</Link>

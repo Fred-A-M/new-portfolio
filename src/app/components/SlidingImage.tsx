@@ -8,7 +8,6 @@ interface ImageProps {
   alt: string;
   mp4?: string;
   webm?: string;
-  rotation?: number;
   position?: {
     x: number | string;
     y: number | string;
@@ -25,7 +24,6 @@ export default function SlidingImage({
   alt,
   mp4,
   webm,
-  rotation = 2,
   width,
   height,
   zIndex = 20,
@@ -58,13 +56,11 @@ export default function SlidingImage({
       animate={
         isInView
           ? {
-              rotate: rotation,
               x: 100,
               y: 0,
               zIndex: 30,
             }
           : {
-              rotate: 0,
               zIndex: zIndex ? zIndex : 20,
               filter: 'blur(10px)',
             }
