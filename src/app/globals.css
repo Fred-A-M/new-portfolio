@@ -69,4 +69,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Rag', sans-serif;
+  background-image: radial-gradient(#ccc 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-attachment: fixed;
 }
