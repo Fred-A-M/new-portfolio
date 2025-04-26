@@ -82,7 +82,7 @@ export default function Header() {
 
       {/* Blob container - separate from scrollable content */}
       <div
-        className="fixed z-[0] pointer-events-none"
+        className="fixed z-[-1] pointer-events-none"
         style={{
           width: `600px`,
           height: `600px`,
@@ -106,7 +106,7 @@ export default function Header() {
       </div>
 
       <div
-        className="fixed z-[0] pointer-events-none"
+        className="fixed z-[-1] pointer-events-none"
         style={{
           width: `300px`,
           height: `300px`,
