@@ -56,7 +56,7 @@ export default function SlidingImage({
       animate={
         isInView
           ? {
-              x: 100,
+              x: '15%',
               y: 0,
               zIndex: 30,
             }
@@ -74,6 +74,7 @@ export default function SlidingImage({
           : {}
       }
       ref={ref}
+      className="hover:text-[var(--main)]"
     >
       {!mp4 && !webm && (
         <Image
@@ -100,7 +101,7 @@ export default function SlidingImage({
           <source src={webm} type="video/webm" />
         </video>
       )}
-      <div className="pl-1">{alt}</div>
+      <div className="pl-1 font-bold">{alt}</div>
     </motion.div>
   );
 }

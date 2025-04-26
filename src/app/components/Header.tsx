@@ -98,7 +98,7 @@ export default function Header() {
           style={{ transformOrigin: 'center', scale, opacity }}
         >
           <motion.path
-            fill="#6c63ff"
+            fill="var(--main)"
             animate={controlsBlob1}
             initial={{ d: blobs1[0] }}
           />
@@ -122,7 +122,7 @@ export default function Header() {
           style={{ transformOrigin: 'center', scale, opacity }}
         >
           <motion.path
-            fill="#6c63ff"
+            fill="var(--main)"
             animate={controlsBlob2}
             initial={{ d: blobs2[0] }}
           />

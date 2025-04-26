@@ -26,7 +26,7 @@ export const StandardSections = (project: Project): ReactNode[] => {
         loop
         muted
         playsInline
-        className="rounded-xl border border-black shadow-xl"
+        className="rounded-xl border border-[var(--main)] shadow-xl"
         style={{ width: '250px', height: 'auto' }}
       >
         <source src={project.galleryMobile[0].mp4} type="video/mp4" />
@@ -37,7 +37,7 @@ export const StandardSections = (project: Project): ReactNode[] => {
         loop
         muted
         playsInline
-        className="rounded-xl border border-black shadow-xl"
+        className="rounded-xl border border-[var(--main)] shadow-xl"
         style={{ width: '250px', height: 'auto' }}
       >
         <source src={project.galleryMobile[1].mp4} type="video/mp4" />
@@ -69,7 +69,7 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
           alt={project.name}
           width={200}
           height={0}
-          className="rounded-xl border border-black shadow-xl w-full h-auto"
+          className="rounded-xl border border-[var(--main)] shadow-xl w-full h-auto"
         />
       </div>
       <div className="w-[200px] flex items-center justify-center">
@@ -78,7 +78,7 @@ export const StandardSectionsMobile = (project: Project): ReactNode[] => {
           alt={project.name}
           width={200}
           height={0}
-          className="rounded-xl border border-black shadow-xl w-full h-auto"
+          className="rounded-xl border border-[var(--main)] shadow-xl w-full h-auto"
         />
       </div>
     </div>,

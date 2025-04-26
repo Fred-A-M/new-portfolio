@@ -31,7 +31,10 @@ export default function DesktopProjects() {
   }, [activeProject]);
 
   return (
-    <div id="work" className="flex flex-col gap-10 w-full scroll-mt-24">
+    <div
+      id="work"
+      className="flex flex-col gap-10 w-full scroll-mt-24 inter-thin"
+    >
       <div className="flex flex-col gap-1">
         <div className="text-xl">Work</div>
         <span className="w-full h-[1px] bg-black"></span>

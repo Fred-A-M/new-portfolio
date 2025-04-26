@@ -20,10 +20,10 @@ export default function DescriptionCard({
   return (
     <div
       style={{ perspective: '1000px' }}
-      className="flex justify-end lg:justify-center pt-10 lg:pt-15"
+      className="flex justify-center pt-10 lg:pt-15"
     >
       <motion.div
-        className="sticky top-1/2 -translate-y-1/4 flex flex-col justify-center items-center shadow-xl bg-[#FEFDF4] h-32 lg:h-48 rounded-xs text-black border border-black w-[70%] text-center"
+        className="sticky top-1/2 -translate-y-1/4 flex flex-col justify-center items-center inter-thin shadow-xl bg-white h-32 lg:h-48 rounded-xl border border-black w-[70%] text-center"
         style={{
           transformStyle: 'preserve-3d',
         }}

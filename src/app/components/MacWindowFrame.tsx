@@ -25,13 +25,13 @@ export default function MacWindowFrame({
       className={`shadow-xl w-full max-w-full ${className}`}
       style={{ maxWidth: width ? `${width}px` : '100%' }}
     >
-      <div className="border overflow-hidden text-[6px] md:text-[.6vw] rounded-[4px] md:rounded-[8px] bg-white">
+      <div className="border border-[var(--main)] overflow-hidden text-[6px] md:text-[.6vw] rounded-[4px] md:rounded-[8px] bg-white">
         {/* Header with traffic light dots */}
-        <div className="flex w-full border-b  p-[4px] md:px-[1em] md:py-[0.8em]">
+        <div className="flex w-full border-b border-[var(--main)] p-[4px] md:px-[1em] md:py-[0.8em]">
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-              className="border border-blue relative mr-[.6em] h-[1em] w-[1em] rounded-full last:mr-0"
+              className="border border-[var(--main)] relative mr-[.6em] h-[1em] w-[1em] rounded-full last:mr-0"
             />
           ))}
         </div>

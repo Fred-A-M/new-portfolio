@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex flex-col gap-10 w-full items-center scroll-mt-24"
+      className="flex flex-col gap-10 w-full items-center scroll-mt-24 inter-thin"
     >
       <div className="flex flex-col gap-1 w-full">
         <div className="sm:text-xl text-lg">Contact</div>

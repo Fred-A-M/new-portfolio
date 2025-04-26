@@ -16,7 +16,7 @@ export default function ProjectPage({ project, sections }: ProjectPageProps) {
   }
 
   return (
-    <div className="flex flex-col w-full justify-center gap-10 pt-32">
+    <div className="flex flex-col w-full justify-center gap-10 pt-32 inter-thin">
       <ProjectHeaderMobile project={project as Project} />
 
       {sections.map((section, index) => (

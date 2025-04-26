@@ -16,7 +16,7 @@ export const GossSections = (project: Project): ReactNode[] => {
           alt={project.name}
           width={200}
           height={0}
-          className="rounded-xl border border-black shadow-xl w-full h-auto"
+          className="rounded-xl border border-[var(--main)] shadow-xl w-full h-auto"
         />
       </div>
       <div className="w-[300px] flex items-center justify-center">
@@ -25,7 +25,7 @@ export const GossSections = (project: Project): ReactNode[] => {
           alt={project.name}
           width={200}
           height={0}
-          className="rounded-xl border border-black shadow-xl w-full h-auto"
+          className="rounded-xl border border-[var(--main)] shadow-xl w-full h-auto"
         />
       </div>
     </div>,
@@ -46,7 +46,7 @@ export const GossSectionsMobile = (project: Project): ReactNode[] => {
           alt={project.name}
           width={200}
           height={0}
-          className="rounded-xl border border-black shadow-xl w-full h-auto"
+          className="rounded-xl border border-[var(--main)] shadow-xl w-full h-auto"
         />
       </div>
       <div className="w-[200px] flex items-center justify-center">
@@ -55,7 +55,7 @@ export const GossSectionsMobile = (project: Project): ReactNode[] => {
           alt={project.name}
           width={200}
           height={0}
-          className="rounded-xl border border-black shadow-xl w-full h-auto"
+          className="rounded-xl border border-[var(--main)] shadow-xl w-full h-auto"
         />
       </div>
     </div>,
