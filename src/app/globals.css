@@ -65,10 +65,19 @@
   backface-visibility: hidden;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Rag', sans-serif;
+  position: relative;
 }
 
 body::before {
@@ -79,6 +88,8 @@ body::before {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(#ccc 1px, transparent 1px);
+  background-repeat: repeat;
   background-size: 30px 30px;
-  background-attachment: fixed;
+  z-index: -1;
+  pointer-events: none;
 }
