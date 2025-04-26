@@ -7,10 +7,10 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="flex flex-col gap-10 w-full items-center scroll-mt-24 inter-thin"
+      className="flex flex-col gap-10 w-full items-center scroll-mt-24"
     >
       <div className="flex flex-col gap-1 w-full">
-        <div className="sm:text-xl text-lg">Contact</div>
+        <div className="sm:text-xl text-lg inter-thin">Contact</div>
         <span className="w-full h-[1px] bg-black"></span>
       </div>
       <div className="flex flex-col lg:w-[80%] w-full gap-10 sm:text-2xl text-xl">
