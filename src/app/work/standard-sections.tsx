@@ -5,11 +5,6 @@ import Image from 'next/image';
 // Create a function that takes the project and returns the sections
 export const StandardSections = (project: Project): ReactNode[] => {
   return [
-    <div key={0} className="flex justify-center w-full">
-      <div className="text-xl">
-        <p>{project.description}</p>
-      </div>
-    </div>,
     <div className="flex flex-col items-center justify-center w-full" key={1}>
       <MacWindowFrame
         mp4={project.galleryDesktop[1].mp4}
@@ -50,7 +45,7 @@ export const StandardSections = (project: Project): ReactNode[] => {
 export const StandardSectionsMobile = (project: Project): ReactNode[] => {
   return [
     <div key={1} className="flex justify-center text-sm w-full">
-      <div className="">
+      <div className="text-md">
         <p>{project.description}</p>
       </div>
     </div>,

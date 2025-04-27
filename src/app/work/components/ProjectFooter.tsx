@@ -26,14 +26,14 @@ export default function ProjectFooter({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <p className="underline">Visit here</p>
+            <p className="underline font-bold">Visit here</p>
           </Link>
         </div>
       )}
       <div
         className={`grid grid-cols-2 items-center ${isMobile ? 'text-lg' : 'text-3xl'}`}
       >
-        <div className="flex justify-start">
+        <div className="flex justify-start rag-normal">
           {previousProject && (
             <Link href={`${previousProject.link}`} scroll={false}>
               <div className="flex items-center gap-2 hover:underline">
@@ -46,7 +46,7 @@ export default function ProjectFooter({
             </Link>
           )}
         </div>
-        <div className="flex justify-end hover:underline">
+        <div className="flex justify-end rag-normal">
           {nextProject && (
             <Link href={`${nextProject.link}`} scroll={false}>
               <div className="flex items-center gap-2 hover:underline">

@@ -17,7 +17,7 @@ export default function ProjectHeaderMobile({ project }: ProjectHeaderProps) {
         />
       </div>
 
-      <p className="text-2xl font-bold">{project.name}</p>
+      <p className="text-2xl rag-normal">{project.name}</p>
 
       <div className="text-sm grid grid-cols-2 gap-2 ">
         <div className="col-span-1 flex flex-col w-fit">

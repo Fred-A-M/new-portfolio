@@ -6,7 +6,7 @@ export const projects = [
     tools: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
     tagline: 'A fun portfolio site for a senior advertising\u00A0creative',
     description:
-      'I created this portfolio site for Alice Dowdall, a senior advertising creative. She wanted a homepage where emoji-style eyes followed the cursor as the user browsed her projects.',
+      "I built a portfolio site for Alice Dowdall, a senior advertising creative. She envisioned a playful homepage where her projects were scattered in an intentionally chaotic layout, brought to life by emoji-style eyes that track the user's cursor as they browse.",
     image: {
       mp4: '/projects/AliceDowdall/desktop1.mp4',
       webm: '/projects/AliceDowdall/desktop1.webm',
@@ -57,7 +57,7 @@ export const projects = [
     ],
     tagline: 'A tool to explore the first 3\u00A0generations of\u00A0Pokémon',
     description:
-      'An interactive site I made to explore the first 3 generations of Pokémon. I used the public GraphQL PokéAPI to fetch the data. The user can browse through the first 3 generations of Pokémon, view their stats, and add them to a favourites list to compare later.',
+      'An interactive site I built to explore the first three generations of Pokémon. It uses the public GraphQL PokéAPI to fetch data, letting users browse Pokémon, view their stats, and save favourites for easy comparison.',
     image: {
       mp4: '/projects/Pokemon/desktop1.mp4',
       webm: '/projects/Pokemon/desktop1.webm',
@@ -106,7 +106,7 @@ export const projects = [
     ],
     tagline: 'A social media platform for voice\u00A0notes',
     description:
-      'I worked in a team of 5 developers to develop a full-featured social network that centred around users posting voice notes, transcription functionality, and live-chat. We used Supabase for the database and authentication, and PlayHT for the text-to-speech functionality.',
+      'I worked in a team of 5 developers to develop a full-featured social network that centred around users posting voice notes, with transcription functionality and live-chat. We used Supabase for the database and authentication, and PlayHT for the text-to-speech functionality.',
     image: {
       mp4: '/projects/Goss/Desktop1.mp4',
       webm: '/projects/Goss/Desktop1.webm',
@@ -138,7 +138,7 @@ export const projects = [
     tools: ['React', 'JavaScript', 'CSS', 'HTML', 'Tailwind CSS', 'Dall-E'],
     tagline: "A turn-based 'trumps' game with mutant\u00A0characters",
     description:
-      "I created a 'Top Trumps' style game where the user plays against the computer to win the deck. I created the gameplay mechanics from scratch and designed the cards, with the mutant images generated using Dall-E.",
+      "I built a 'Top Trumps' style game where the user competes against the computer to win the deck. I developed the gameplay mechanics from scratch and designed the cards, with mutant character images generated using DALL·E.",
     image: {
       mp4: '/projects/MutantTrumps/desktop1.mp4',
       webm: '/projects/MutantTrumps/desktop1.webm',
