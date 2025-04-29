@@ -43,6 +43,8 @@ export default function MacWindowFrame({
             width={width}
             height={height}
             className="h-auto w-full"
+            priority
+            loading="eager"
           />
         )}
         {mp4 && (
