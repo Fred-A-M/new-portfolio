@@ -41,7 +41,7 @@ export const projects = [
       },
     ],
     link: '/work/alice-dowdall',
-    website: 'https://alice-dowdall.vercel.app/',
+    website: 'https://www.alicedowdall.com/',
   },
   {
     name: 'Pokémon Explorer',
