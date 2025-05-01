@@ -5,23 +5,23 @@ import Scroll from './Scroll';
 
 export const metadata: Metadata = {
   title: 'fred-a-m.dev',
-  description: 'Fred Moore: Web Developer, London, UK',
+  description: 'Fred Moore: Web Developer, London',
   openGraph: {
-    title: 'fred-a-m.dev',
-    description: 'Fred Moore: Web Developer, London, UK',
+    title: 'Fred Moore',
+    description: 'Web Developer: London',
     images: [
       {
-        url: '/logo.png', // Path relative to the public directory
-        width: 731,
-        height: 731,
+        url: '/logo.png',
+        width: 1200,
+        height: 629,
         alt: 'Fred Moore - Web Developer',
       },
     ],
     type: 'website',
   },
   icons: {
-    icon: '/blob2.svg',
-    apple: '/blob2.svg',
+    icon: '/blob.png',
+    apple: '/blob.png',
   },
 };
 
