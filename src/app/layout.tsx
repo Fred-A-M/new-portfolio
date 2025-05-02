@@ -6,6 +6,7 @@ import Scroll from './Scroll';
 export const metadata: Metadata = {
   title: 'fred-a-m.dev',
   description: 'Fred Moore: Web Developer, London',
+  metadataBase: new URL('https://www.fred-a-m.dev'),
   openGraph: {
     title: 'Fred Moore',
     description: 'Web Developer: London',
