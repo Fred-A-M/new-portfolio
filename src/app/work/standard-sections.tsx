@@ -23,6 +23,7 @@ export const StandardSections = (project: Project): ReactNode[] => {
         playsInline
         className="rounded-xl border border-[var(--main)] shadow-xl"
         style={{ width: '250px', height: 'auto' }}
+        poster={project.galleryMobile[0].image}
       >
         <source src={project.galleryMobile[0].mp4} type="video/mp4" />
         <source src={project.galleryMobile[0].webm} type="video/webm" />
@@ -34,6 +35,7 @@ export const StandardSections = (project: Project): ReactNode[] => {
         playsInline
         className="rounded-xl border border-[var(--main)] shadow-xl"
         style={{ width: '250px', height: 'auto' }}
+        poster={project.galleryMobile[1].image}
       >
         <source src={project.galleryMobile[1].mp4} type="video/mp4" />
         <source src={project.galleryMobile[1].webm} type="video/webm" />

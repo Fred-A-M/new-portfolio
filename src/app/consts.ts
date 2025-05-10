@@ -38,6 +38,7 @@ export const projects = [
         mp4: '/projects/AliceDowdall/mobile2.mp4',
         webm: '/projects/AliceDowdall/mobile2.webm',
         image: '/projects/AliceDowdall/mobile2.png',
+        gif: '/projects/AliceDowdall/mobile2.gif',
       },
     ],
     link: '/work/alice-dowdall',
